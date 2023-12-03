@@ -10,16 +10,7 @@ namespace Oefeningen_tekstbestanden
         public void ReadAndPrint()
         {
             // Open dit bestand en toon elke regel op het scherm
-            using (StreamReader reader = new StreamReader(filePath))
-            {
-                string? line;
-
-                // Lees het bestand regel voor regel
-                while ((line = reader.ReadLine()) != null)
-                {
-                    Console.WriteLine(line);
-                }
-            }
+            
         }
     }
 }

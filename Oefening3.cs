@@ -15,13 +15,7 @@ namespace Oefeningen_tekstbestanden
              * of de inhoud klopt.
              */
 
-            using (StreamWriter writer = new StreamWriter(file))
-            {
-                foreach(string item in content)
-                {
-                    writer.WriteLine(item);
-                }
-            }
+            
 
         }
 

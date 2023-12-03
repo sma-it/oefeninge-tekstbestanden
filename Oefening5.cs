@@ -19,25 +19,7 @@ namespace Oefeningen_tekstbestanden
              * de foutmelding van de Exception.
              */
             
-            while (true)
-            {
-                Console.Write("Bestandsnaam: ");
-                string? input = Console.ReadLine();
-                if (input == null || input.Length == 0)
-                {
-                    break;
-                }
-                try
-                {
-                    using (StreamReader reader = new StreamReader(path + input))
-                    {
-                        Console.WriteLine("This file exists");
-                    }
-                } catch (FileNotFoundException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-            }
+            
         }
     }
 }

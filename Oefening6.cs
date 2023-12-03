@@ -19,22 +19,7 @@ namespace Oefeningen_tekstbestanden
              * Gebruik een uitgebreide foutafhandeling.
              */ 
 
-            try
-            {
-                using(StreamWriter sw = new StreamWriter(file, append: true))
-                {
-                    sw.WriteLine(DateTime.Now.ToString("HH:mm:ss") + " | " + message);
-                }
-            } catch (FileNotFoundException ex)
-            {
-                Console.WriteLine(ex.Message);
-            } catch (UnauthorizedAccessException ex)
-            {
-                Console.WriteLine(ex.Message);
-            } catch (IOException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
 
         }
 
@@ -45,30 +30,7 @@ namespace Oefeningen_tekstbestanden
              * uitgebreide foutafhandeling.
              */ 
 
-            try
-            {
-                using(StreamReader sr = new StreamReader(file))
-                {
-                    string? line;
-
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        Console.WriteLine(line);
-                    }
-                }
-            }
-            catch (FileNotFoundException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (IOException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            
 
         }
 
